@@ -14,11 +14,7 @@
 //==============================================================================
 TapeReel::TapeReel(FlangerAudioProcessor& p, int index) : audioProcessor(p), reelIndex(index)
 {
-    image = juce::ImageFileFormat::loadFrom(juce::File("D:/Artie_Photos/tape_1.png"));
-    if (image.isValid())
-    {
-        DBG("Valid Image");
-    }
+    image = juce::ImageFileFormat::loadFrom(juce::File("C:/ProgramData/Recluse-Audio/Flanger/Images/tape_1.png"));
     phaseIncrement = juce::MathConstants<float>::twoPi / 180;
 }
 
@@ -28,14 +24,11 @@ TapeReel::~TapeReel()
 
 void TapeReel::paint (juce::Graphics& g)
 {
-
-
     g.drawImageWithin(image, 0, 0, getWidth()-2, getHeight()-2, juce::RectanglePlacement::centred);
     g.setColour(juce::Colours::transparentBlack.withAlpha(0.f));
     g.fillAll();
-    g.setColour(juce::Colours::white);
-    g.drawRect(getLocalBounds().toFloat(), 2.f);
-
+    //g.setColour(juce::Colours::white);
+    //g.drawRect(getLocalBounds().toFloat(), 2.f);
 }
 
 void TapeReel::resized()

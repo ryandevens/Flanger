@@ -259,7 +259,6 @@ void FlangerAudioProcessor::updateParameters()
     delayLines[1]->setLFOFreq(*lfoFreq2);
     auto feedback1 = apvts.getRawParameterValue("FEEDBACK 1");
     auto feedback2 = apvts.getRawParameterValue("FEEDBACK 2");
-    DBG(*feedback1);
     delayLines[0]->setFeedback(*feedback1);
     delayLines[1]->setFeedback(*feedback2);
 

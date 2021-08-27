@@ -154,6 +154,8 @@ void FlangerAudioProcessorEditor::paint (juce::Graphics& g)
     auto frame = juce::Rectangle<float>(getWidth() * 0.15f, getHeight() * 0.2f, getWidth() * 0.7f, getHeight() * 0.6f);
     g.drawRoundedRectangle(frame, 3.f, 3.f);
 
+    g.drawRect(0, 0, getWidth(), getHeight(), 2);
+
   //  g.setColour(babyBlue->withAlpha(0.8f));
     g.drawLine(getWidth() * 0.15f, getHeight() * 0.2f, 0, 0, 2.f);
     g.drawLine(frame.getBottomLeft().getX(), frame.getBottomLeft().getY(), 0, getHeight(), 2.f);
@@ -209,14 +211,9 @@ void FlangerAudioProcessorEditor::paint (juce::Graphics& g)
         translated(-pathBounds1.getWidth() * 0.5f, pathBounds1.getHeight() * 0.5f));
     g.fillPath(p1);
 
-    g.drawRect(0, 0, getWidth(), getHeight(), 2);
     g.setFont(juce::Font("Consolas", "Regular", 24.f));
-    juce::String str = "Flanger";
-    g.drawText(str, 200, 10, 100, 20, juce::Justification::centred);
-
-    //g.setFont(juce::Font("Consolas", "Regular", 14.f));
-    //juce::String de = "Depth";
-    //g.drawText(de, 100, 10, 100, 20, juce::Justification::centred);
+    juce::String str = "F L A N G E R";
+    g.drawText(str, 165, 10, 160, 20, juce::Justification::centred);
 
 }
 
